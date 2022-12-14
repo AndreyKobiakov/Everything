@@ -1,6 +1,6 @@
-import { SET_AUTH, LOGOUT } from '../types';
+import { LOGOUT, SET_AUTH } from '../types';
 
-export default function userReducer(state = { fetching: false }, action) {
+export default function userReducer(state = {}, action) {
   const { type, payload } = action;
   switch (type) {
     case SET_AUTH:

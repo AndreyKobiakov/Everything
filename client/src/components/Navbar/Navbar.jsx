@@ -1,7 +1,61 @@
-import React from 'react'
+import React from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from '../../redux/actions/userActions';
 
 export default function Navbar() {
+  const userSession = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const logoutHandler = () => {
+    dispatch(logout());
+    navigate('/');
+  };
+
   return (
-    <div>Navbar</div>
-  )
+    <ul
+      className="nav justify-content-center"
+      style={{
+        position: 'fixed', width: '100%', heingh: '85px', zIndex: 3,
+      }}
+    >
+      <NavLink className="navbar-brand" to="/">
+        <img
+          className="img-brand"
+          src="/logo1.jpg"
+          alt=""
+          style={{
+            height: '30px',
+            width: '30px',
+          }}
+        />
+
+      </NavLink>
+      <li className="nav-item">
+        <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link disabled">{ userSession.userName ? `Hello ${userSession.userName}` : 'Hello, guest!' }</a>
+      </li>
+      {!userSession.userName
+        ? (
+          <>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/login">Login</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/registration">Registration</NavLink>
+            </li>
+          </>
+        ) : (
+          <>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/game">Start game</NavLink>
+            </li>
+            <button type="button" className="btn btn-link" onClick={logoutHandler}>Logout</button>
+
+          </>
+        )}
+    </ul>
+  );
 }
