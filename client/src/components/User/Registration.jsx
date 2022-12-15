@@ -39,7 +39,7 @@ function Registration() {
             <input onChange={inputHandler} className="form-control" value={inputs.password} type="password" name="password" placeholder="Pass" />
           </div>
 
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <button type="submit" className="btn btn-outline-primary">Submit</button>
           <p>{errors && errors}</p>
         </form>
       </div>

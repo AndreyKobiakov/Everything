@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../redux/actions/userActions';
+import './css/Navbar.css';
 
 export default function Navbar() {
   const userSession = useSelector((state) => state.user);
@@ -13,29 +14,13 @@ export default function Navbar() {
   };
 
   return (
-    <ul
-      className="nav justify-content-center"
-      style={{
-        position: 'fixed', width: '100%', heingh: '85px', zIndex: 3,
-      }}
-    >
-      <NavLink className="navbar-brand" to="/">
-        <img
-          className="img-brand"
-          src="/logo1.jpg"
-          alt=""
-          style={{
-            height: '30px',
-            width: '30px',
-          }}
-        />
-
-      </NavLink>
+    <ul className="nav justify-content-center cox-navbar">
+      <NavLink className="navbar-brand cox-logo" to="/" />
       <li className="nav-item">
         <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
       </li>
       <li className="nav-item">
-        <a className="nav-link disabled">{ userSession.userName ? `Hello ${userSession.userName}` : 'Hello, guest!' }</a>
+        <a className="nav-link disabled" href>{ userSession.userName ? `Hello ${userSession.userName}` : 'Hello, guest!' }</a>
       </li>
       {!userSession.userName
         ? (

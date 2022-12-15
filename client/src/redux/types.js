@@ -4,4 +4,3 @@ export const LOGOUT = 'LOGOUT';
 
 // erreos
 export const ERRORS = 'ERRORS';
-

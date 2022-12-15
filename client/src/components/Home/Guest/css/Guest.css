@@ -1,0 +1,16 @@
+.heading{
+  text-decoration-line:underline;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  color: rgb(13, 14, 13);
+  
+}
+body{
+  background-image: url(./FrontGuest.jpg);
+  background-position: center center;      
+  background-repeat: no-repeat;      
+  background-attachment: fixed;      
+  background-size: cover;      
+  background-color: #464646; 
+}
+

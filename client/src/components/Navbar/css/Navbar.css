@@ -1,0 +1,14 @@
+.cox-navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 3 ;
+  top: 0;
+ }
+ .cox-logo{
+  width: 30px;  
+  height: 30px;
+  background-image: url(./fingerprint.svg);
+  background-position: center center;      
+  background-repeat: no-repeat;      
+  background-size: cover;
+  }
