@@ -20,7 +20,13 @@ export default function Navbar() {
         <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
       </li>
       <li className="nav-item">
-        <a className="nav-link disabled" href>{ userSession.userName ? `Hello ${userSession.userName}` : 'Hello, guest!' }</a>
+        <a
+          className="nav-link disabled navUserName"
+          style={{ color: 'rgb(61, 95, 85)', fontSize: '18px' }}
+          href
+        >
+          { userSession.userName ? `Hello ${userSession.userName}` : 'Hello, guest!' }
+        </a>
       </li>
       {!userSession.userName
         ? (
@@ -33,13 +39,7 @@ export default function Navbar() {
             </li>
           </>
         ) : (
-          <>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/game">Start game</NavLink>
-            </li>
-            <button type="button" className="btn btn-link" onClick={logoutHandler}>Logout</button>
-
-          </>
+          <button type="button" className="btn btn-link" onClick={logoutHandler}>Logout</button>
         )}
     </ul>
   );

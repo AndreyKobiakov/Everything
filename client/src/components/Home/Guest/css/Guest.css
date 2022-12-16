@@ -1,16 +1,41 @@
+body{
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+}
+#root{
+  height: 100%;
+}
 .heading{
   text-decoration-line:underline;
-  margin-top: 200px;
-  margin-bottom: 100px;
+  font-size:25px;
+  font-style: italic;
+  margin-left: 3%;
   color: rgb(13, 14, 13);
   
 }
-body{
-  background-image: url(./FrontGuest.jpg);
-  background-position: center center;      
-  background-repeat: no-repeat;      
-  background-attachment: fixed;      
-  background-size: cover;      
-  background-color: #464646; 
-}
+.coxAbout{
+  font-size:17px;
+  margin-left: 3%;
+  margin-top: 20px
+  }
 
+  .RegistrationP{
+    font-size:17px;
+    margin-left: 3%;
+    -webkit-animation: blink 3s linear infinite;
+    animation: blink 3s linear infinite;
+    margin-top: 27%;
+  }
+  @-webkit-keyframes blink {
+    0% { color: rgba(34, 34, 34, 1); }
+    50% { color: rgba(34, 34, 34, 0); }
+    100% { color: rgba(34, 34, 34, 1); }
+  }
+  @keyframes blink {
+    0% { color: rgba(34, 34, 34, 1); }
+    50% { color: rgba(34, 34, 34, 0); }
+    100% { color: rgba(34, 34, 34, 1); }
+  }

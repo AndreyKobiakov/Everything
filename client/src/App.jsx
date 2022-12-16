@@ -13,7 +13,7 @@ function App() {
     dispatch(checkAuth());
   }, []);
   return (
-    <div className="myContainer">
+    <>
       <div>
         <Navbar />
       </div>
@@ -22,7 +22,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
       </Routes>
-    </div>
+    </>
   );
 }
 

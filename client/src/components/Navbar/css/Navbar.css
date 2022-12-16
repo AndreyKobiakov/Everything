@@ -12,3 +12,8 @@
   background-repeat: no-repeat;      
   background-size: cover;
   }
+  .navUserName{
+  font-size:30px;
+  font-style: italic;
+  color: rgb(61, 95, 85)
+  }
