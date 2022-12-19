@@ -12,7 +12,7 @@ export default function Authorized() {
       <div className="authorizedBackground">
         <div className="homeLinks">
           <NavLink className="coxLinck" to="/toDo">Drag and drop To Do</NavLink>
-          <NavLink className="coxLinck" to="/game">Black Jack</NavLink>
+          <NavLink className="coxLinck" to="/blackjack">Black Jack</NavLink>
         </div>
       </div>
     </Layout>

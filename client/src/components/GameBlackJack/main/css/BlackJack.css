@@ -1,0 +1,41 @@
+.button {
+  margin-top: 10%;
+  margin-left: 3%;
+ }
+
+.ComDeck{
+  position:absolute;
+  top: 30%;
+  left:40%;
+}
+
+.scoreCom{
+  position:absolute;
+  top: 40%;
+  left:25%;
+}
+.YouDeck{
+  position:absolute;
+  top: 70%;
+  left:40%;
+}
+.YouScore{
+  position:absolute;
+  top: 65%;
+  left:25%;
+}
+.h3texte{
+    font-size:20px;
+    font-style: italic;
+    color: rgb(220, 241, 224);
+    margin-top: 5px
+  }
+.cardImg{
+  height: 150px;
+  width: 100px;
+ 
+}
+.btnGame{
+  height: 5vh;
+  width: 15vh;
+}
