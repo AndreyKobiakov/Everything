@@ -2,7 +2,9 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './css/Modal.css';
 
-export default function Modal({ active, setActive, resultGame }) {
+export default function Modal({
+  active, setActive, resultGame, newGame,
+}) {
   const navigate = useNavigate();
   return (
     <div className={active ? 'cox-modal acvite' : 'cox-modal'}>
@@ -20,7 +22,7 @@ export default function Modal({ active, setActive, resultGame }) {
             className="btn btn-outline-info"
             onClick={() => {
               setActive(false);
-              window.location.reload('/blackjack');
+              newGame();
             }}
           >
             Play more

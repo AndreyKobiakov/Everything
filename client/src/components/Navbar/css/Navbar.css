@@ -3,17 +3,19 @@
   width: 100%;
   z-index: 3 ;
   top: 0;
+  background-color: rgba(255,255,255, 0.2);
  }
- .cox-logo{
+ .cox-icon-svg{
   width: 30px;  
   height: 30px;
-  background-image: url(./fingerprint.svg);
   background-position: center center;      
   background-repeat: no-repeat;      
   background-size: cover;
+  color: black;
   }
   .navUserName{
-  font-size:30px;
+  line-height: 37px;
+  font-size:20px;
   font-style: italic;
-  color: rgb(61, 95, 85)
+  color: rgb(0, 0, 0)
   }

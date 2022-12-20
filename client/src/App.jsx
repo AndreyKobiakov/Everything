@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import BlackJack from './components/GameBlackJack/main/BlackJack';
-
+import BlackJack from './components/GameBlackJack/BlackJack';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Login from './components/User/Login';

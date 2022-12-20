@@ -29,6 +29,7 @@ flex-direction: column;
 }
 .cox-modal-button{
   display: flex;
+  width: 270px;
   align-items: center;
   justify-content: space-around;
 }
