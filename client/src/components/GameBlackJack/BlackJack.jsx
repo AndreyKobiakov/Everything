@@ -108,7 +108,7 @@ export default function BlackJack() {
         resultGame={resultGame}
         newGame={game}
       />
-      <div className="Father">
+      <div>
         <div className="ComDeck">
           {compDeck && compDeck?.map((el) => (
             <img

@@ -1,7 +1,6 @@
 import { ERRORS } from '../types';
 
-// eslint-disable-next-line default-param-last
-export default function postsReducer(state = '', action) {
+export default function errorsReduser(state = '', action) {
   const { type, payload } = action;
   switch (type) {
     case ERRORS:

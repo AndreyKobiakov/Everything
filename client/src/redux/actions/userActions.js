@@ -11,7 +11,7 @@ export const logout = () => (dispatch) => {
     .catch(console.log);
 };
 
-export const submitHandlerReg = (e, inputs, navigate) => (dispatch) => {
+export const submitHandlerReg = (e, inputs, navigate, setModal) => (dispatch) => {
   e.preventDefault();
   axios.post('/api/user/reg', inputs)
     .then((res) => {
@@ -21,10 +21,13 @@ export const submitHandlerReg = (e, inputs, navigate) => (dispatch) => {
       navigate('/');
       dispatch(errors(''));
     })
-    .catch(() => dispatch(errors('Такой email уже существует')));
+    .catch(() => {
+      dispatch(errors('Такой email уже существует'));
+      setModal(true);
+    });
 };
 
-export const submitHandlerLogin = (e, inputs, navigate) => (dispatch) => {
+export const submitHandlerLogin = (e, inputs, navigate, setModal) => (dispatch) => {
   e.preventDefault();
   axios.post('/api/user/login', inputs)
     .then((res) => {
@@ -34,7 +37,10 @@ export const submitHandlerLogin = (e, inputs, navigate) => (dispatch) => {
       navigate('/');
       dispatch(errors(''));
     })
-    .catch(() => dispatch(errors('Email или пароль не верные')));
+    .catch(() => {
+      dispatch(errors('Email или пароль не верные'));
+      setModal(true);
+    });
 };
 export const checkAuth = () => (dispatch) => {
   axios.post('/api/user/check')
