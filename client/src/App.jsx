@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
+import DragAndDropToDo from './components/DragAndDropToDo';
 import BlackJack from './components/GameBlackJack/BlackJack';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
@@ -23,6 +24,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/blackjack" element={<BlackJack />} />
+        <Route path="/toDo" element={<DragAndDropToDo />} />
       </Routes>
     </>
   );
